@@ -1,8 +1,8 @@
 use pyo3::{pyclass, pymethods, pymodule, types::PyModule, Bound, PyResult, Python};
-use pyo3_special_method_derive::{DictHelper, DirHelper, GetattrHelper, StrReprHelper};
+use pyo3_special_method_derive::{Dict, Dir, Getattr, Repr, Str};
 
 #[pyclass]
-#[derive(DirHelper, DictHelper, StrReprHelper, GetattrHelper, Clone)]
+#[derive(Dir, Dict, Str, Repr, Getattr, Clone)]
 pub enum Address {
     House {
         country: String,
@@ -20,7 +20,7 @@ pub enum Address {
 }
 
 #[pyclass]
-#[derive(DirHelper, DictHelper, StrReprHelper, GetattrHelper)]
+#[derive(Dir, Dict, Str, Repr, Getattr)]
 pub struct Person {
     pub name: String,
     pub age: u8,
