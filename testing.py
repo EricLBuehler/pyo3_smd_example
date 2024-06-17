@@ -1,6 +1,6 @@
 """
 Install maturin in a virtual env: `pip install maturin[patchelf]`
-Run: `matuin develop -r`
+Run: `maturin develop -r`
 
 Set breakpoints for debugging, or simply run this program!
 """
