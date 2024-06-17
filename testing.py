@@ -20,5 +20,5 @@ print(f"{person.name=}")
 print(f"{person.address.country=}")
 # dir(person)=['address', 'age', 'name']
 print(f"{dir(person)=}")
-# dir(person)=['city', 'country', 'street', 'street_number']
+# dir(person.address)=['city', 'country', 'street', 'street_number']
 print(f"{dir(person.address)=}")
