@@ -1,10 +1,13 @@
-"""
-Install maturin in a virtual env: `pip install maturin[patchelf]`
-Run: `matuin develop -r`
+# Example of [pyo3_special_method_derive](https://crates.io/crates/pyo3_special_method_derive)
 
-Set breakpoints for debugging, or simply run this program!
-"""
+This is an example of the pyo3_special_method_derive crate, demonstrating the `__dir__`, `__dict__`, `__str__`/`__repr__`, and `__getattr__` features on structs and enums in both printing and debugging use cases.
 
+## Install
+- Install maturin in a virtual env: `pip install maturin[patchelf]`
+- Install the example: `matuin develop -r`
+
+## Example
+```py
 import pyo3_smd_example
 
 person = pyo3_smd_example.Person()
@@ -22,3 +25,4 @@ print(f"{person.address.country=}")
 print(f"{dir(person)=}")
 # dir(person)=['city', 'country', 'street', 'street_number']
 print(f"{dir(person.address)=}")
+```
